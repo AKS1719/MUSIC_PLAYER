@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0px;
+    padding: 0;
+    font-family: cursive;
+}
+
+.main{
+    height: 100vh;
+    background-color: black;
+}
+.SongsMenu{
+    padding-top: 20px;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 85vh ;
+    background-color: black;
+    /* #53829b */
+}
+
+.SongsMenu div{
+    height: 200px;
+    width: 300px;
+    color: white;
+    margin: 10px 10px;
+    background-color: black;
+
+}
+
+.SongsMenu div img{
+    height: 200px;
+    width: 300px;
+}
+
+
+
+.player{
+    height: 12.6vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.player .track{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player .track img{
+    margin: 2rem;
+}
+
+.player .track h4{
+    margin-right: 2rem;
+}
+.player .controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 270px);
+}
+
+.player #controlsBtn{
+    margin-top: 7px;
+}
+.player div button{
+    background-color: transparent;
+    border: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .SongsMenu{
+        height: 75vh;
+    }
+    .player{
+        height: 22.6vh;
+    }
+    .player .track{
+        height: 20vh;
+        width: 200px;
+        flex-direction: column;
+    }
+    .player .track h4{
+        margin-left: 2rem ;
+    }
+    .player #controlsBtn{
+        display: flex;
+        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
