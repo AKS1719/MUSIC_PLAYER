@@ -2,46 +2,7 @@
 // const hourEl = document.getElemenhan tById("pm");
 
 
-function Seeking()
-{
-    
-    startTime = document.getElementById("startTime");
-    EndTime = document.getElementById("EndTime");
-    var seekbar = document.getElementById('seekbar');
-    seekbar.value = 0;
-    var audio = document.getElementById("audio");
 
-    function setupSeekbar() {
-        seekbar.min = audio.startTime;
-        seekbar.max = audio.startTime +audio.duration;
-        min = Math.trunc(audio.duration/60);
-        sec = Math.trunc(audio.duration%60)
-        if(min<=9)min = "0"+min;
-        if(sec<=9)sec = "0"+sec;
-        EndTime.innerHTML = min+":"+sec;
-    }
-    audio.ondurationchange = setupSeekbar;
-
-    function seekAudio() {
-        audio.currentTime = seekbar.value;
-    }
-
-    function updateUI() {
-        var lastBuffered = audio.buffered.end(audio.buffered.length-1);
-        seekbar.min = audio.startTime;
-        seekbar.max = lastBuffered;
-        seekbar.value = audio.currentTime;
-        min = Math.trunc(audio.currentTime/60);
-        sec = Math.trunc(audio.currentTime%60)
-        if(min<=9)min = "0"+min;
-        if(sec<=9)sec = "0"+sec;
-        startTime.innerHTML =min+":"+sec;
-    }
-    seekbar.onchange = seekAudio;
-    audio.ontimeupdate = updateUI;
-    audio.addEventListener('durationchange', setupSeekbar);
-    audio.addEventListener('timeupdate', updateUI);
-}
 
 obj = {
     1:"Different World",
